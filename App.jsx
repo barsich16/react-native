@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -16,6 +15,9 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {Task2} from "./src/components/Task2";
+import {Task3} from "./src/components/Task3";
+// import Logo from "./assets/icons/logo.svg";
 
 
 function Section({children, title}) {
@@ -31,23 +33,23 @@ function Section({children, title}) {
 function App() {
 
   return (
-    <SafeAreaView>
-      <StatusBar
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic">
+    <SafeAreaView style={styles.safeArea}>
+      <StatusBar />
         <View>
             <Text style={styles.title}>My first App!</Text>
+            <Task2 />
+            <Task3 />
+            {/*<Logo width={120} height={40} />*/}
         </View>
-      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  safeArea: {
+    flex: 1,
+    // height: 1000,
+    //   backgroundColor: '#999',
   },
   title: {
     fontSize: 24,
