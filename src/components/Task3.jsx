@@ -1,33 +1,35 @@
 import React from 'react';
-import {StyleSheet, Text, View} from "react-native";
+import {Button, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
 
-let styles = StyleSheet.create({
-    linearGradient: {
-        // flex: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
-        borderRadius: 5
-    },
-    buttonText: {
-        fontSize: 18,
-        textAlign: 'center',
-        margin: 10,
-        color: '#ffffff',
-        // backgroundColor: 'red',
-    },
-});
-
-export const Task3 = () => {
+export const Task3 = ({navigation}) => {
     return (
-        // <View>
             <LinearGradient colors={['#d9d9dc', '#3b5998', '#192f6a']} style={styles.linearGradient}>
-                <Text style={styles.buttonText}>
-                    Sign in with Facebook and other
-                </Text>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('Gradient')}
+                >
+                    <Text style={styles.buttonText}>Go to Gradient Screen</Text>
+                </TouchableOpacity>
+                {/*<Button style={styles.buttonText} title="Go to Gradient Screen"*/}
+                {/*        onPress={() => navigation.navigate('Gradient')}/>*/}
             </LinearGradient>
-        // </View>
-
     )
 }
+
+const styles = StyleSheet.create({
+    linearGradient: {
+        paddingVertical: 15,
+        borderRadius: 25,
+        marginTop: 15
+    },
+    button: {
+        backgroundColor: 'transparent',
+    },
+    buttonText: {
+        fontSize: 24,
+        textAlign: 'center',
+        color: '#ffffff',
+    }
+});
 
