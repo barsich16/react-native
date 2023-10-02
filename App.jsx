@@ -22,6 +22,30 @@ import Task11 from "./src/components/Task11";
 import {GestureHandlerRootView} from "react-native-gesture-handler";
 import CameraPermissionScreen from "./src/components/PermissionsPage";
 import {Task13} from "./src/components/Task13";
+import {Task14} from "./src/components/Task14";
+import Task16 from "./src/components/Task16";
+import {Task17} from "./src/components/Task17";
+import Task18 from "./src/components/Task18";
+import {Task19} from "./src/components/Task19";
+import {Task20} from "./src/components/Task20";
+import {CopilotProvider} from "react-native-copilot";
+import Task21 from "./src/components/Task21";
+import Task22 from "./src/components/Task22";
+import {Task222} from "./src/components/Task222";
+import usePushNotification from "./src/hooks/usePushNotification";
+import { Alert } from 'react-native';
+import messaging from '@react-native-firebase/messaging';
+import Task24 from "./src/components/Task24";
+import {Task25} from "./src/components/Task25";
+import Task26 from "./src/components/Task26";
+import Task27 from "./src/components/Task27";
+import EStyleSheet from "react-native-extended-stylesheet";
+import {Task28} from "./src/components/Task28";
+
+EStyleSheet.build({
+  $baseColor: 'green',
+});
+
 
 function App() {
   // const [cameraPermission, setCameraPermission] = useState(null);
@@ -41,16 +65,42 @@ function App() {
   //
   // const showPermissionsPage = cameraPermission !== 'granted' || microphonePermission === 'not-determined';
 
+  // const {
+  //   requestUserPermission,
+  //   getFCMToken,
+  //   listenToBackgroundNotifications,
+  //   listenToForegroundNotifications,
+  //   onNotificationOpenedAppFromBackground,
+  //   onNotificationOpenedAppFromQuit,
+  // } = usePushNotification();
+  //
+  // useEffect(() => {
+  //   const listenToNotifications = () => {
+  //     try {
+  //       getFCMToken();
+  //       requestUserPermission();
+  //       onNotificationOpenedAppFromQuit();
+  //       listenToBackgroundNotifications();
+  //       listenToForegroundNotifications();
+  //       onNotificationOpenedAppFromBackground();
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //
+  //   listenToNotifications();
+  // }, []);
+
   useEffect(() => {
     SplashScreen.hide();
   }, []);
   return (
+      // <Task24 />
     <SafeAreaView style={styles.safeArea}>
       <GestureHandlerRootView style={{ flex: 1 }}>
-
         <StatusBar />
         <ScrollView>
-          <View style={{paddingHorizontal: 10, gap: 15}}>
+          <View style={{paddingHorizontal: 10, gap: 15, justifyContent: 'center'}}>
             <Text style={styles.title}>My first App!</Text>
             <Task2 />
             <Task3 />
@@ -60,12 +110,26 @@ function App() {
             <Task11 />
             <CameraPermissionScreen />
             <Task13 />
-          </View>
+            <Task14 />
+            <Task16 />
+            <Task17 />
+            <Task18 />
+            {/*<Task19/>   different screens*/}
+       {/*<CopilotProvider stopOnOutsideClick androidStatusBarVisible tooltipStyle={{ backgroundColor: "#9FA8DA" }} >*/}
+       {/*  <Task20 />*/}
+       {/*</CopilotProvider>*/}
+            <Task21 />
+            <Task222 />
+            <Task25 />
+            <Task26 />
+            <Task27 />
+            <Task28 />
+             </View>
         </ScrollView>
+        <Task24 />
 
         <FlashMessage position="top" />
       </GestureHandlerRootView>
-      {/*  {}*/}
     </SafeAreaView>
   );
 }

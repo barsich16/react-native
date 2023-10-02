@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013428500774",
+    "project_id": "awesomeproject-f3aea",
+    "storage_bucket": "awesomeproject-f3aea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013428500774:android:69ecb482531785324fa9e7",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ_LUUO6YyeqGBK4x7uaCYGL5FefEaHzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
